@@ -1,0 +1,30 @@
+<h1>Listing submits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Exercise</th>
+      <th>Result</th>
+      <th>Try count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @submits.each do |submit| %>
+      <tr>
+        <td><%= submit.user_id %></td>
+        <td><%= submit.exercise_id %></td>
+        <td><%= submit.result %></td>
+        <td><%= submit.try_count %></td>
+        <td><%= link_to 'Show', submit %></td>
+        <td><%= link_to 'Destroy', submit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Submit', new_submit_path %>

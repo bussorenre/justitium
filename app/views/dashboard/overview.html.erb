@@ -10,26 +10,28 @@
   <% end %>
 </div>
 
-<h2 class="sub-header">Section title</h2>
+<h2 class="sub-header">Submit history</h2>
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Header</th>
-        <th>Header</th>
-        <th>Header</th>
-        <th>Header</th>
+        <th>ID</th>
+        <th>Exercise</th>
+        <th>Result</th>
+        <th>Date</th>
+        <th>Try count</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1,001</td>
-        <td>Lorem</td>
-        <td>ipsum</td>
-        <td>dolor</td>
-        <td>sit</td>
-      </tr>
+      <% @submits.each do |submit| %>
+        <tr>
+          <td><%= submit.id %></td>
+          <td><%= link_to submit.exercise.title, submit.exercise %></td>
+          <td><%= submit.result %></td>
+          <td><%= submit.created_at %></td>
+          <td><%= submit.try_count %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825105800) do
+ActiveRecord::Schema.define(version: 20140825151025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20140825105800) do
     t.string   "unique_name"
     t.string   "title"
     t.text     "content_body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "submits", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "exercise_id"
+    t.string   "result"
+    t.integer  "try_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

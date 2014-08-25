@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :submits, :except => [:edit, :update]
+
   get 'dashboard', to: 'dashboard#overview'
   get 'dashboard/overview'
 
