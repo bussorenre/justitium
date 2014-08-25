@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'dashboard/index'
+
+  get 'dashboard/overview'
+
   resources :exercises
 
   devise_for :users
