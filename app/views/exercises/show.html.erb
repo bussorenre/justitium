@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique name:</strong>
+  <%= @exercise.unique_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @exercise.title %>
+</p>
+
+<p>
+  <strong>Content body:</strong>
+  <%= @exercise.content_body %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>
