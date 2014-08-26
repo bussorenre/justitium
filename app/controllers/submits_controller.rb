@@ -5,7 +5,7 @@ class SubmitsController < ApplicationController
   # GET /submits
   # GET /submits.json
   def index
-    @submits = Submit.all
+    @submits = Submit.where(user_id: current_user.id).order("created_at DESC")
   end
 
   # GET /submits/1
@@ -23,6 +23,11 @@ class SubmitsController < ApplicationController
   def create
     @submit = Submit.new(submit_params)
     @submit.user = current_user
+
+    upload_file = submit_params[:file]
+    if upload_file != nil
+      @submit.content = upload_file.read
+    end
 
     respond_to do |format|
       if @submit.save

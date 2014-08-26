@@ -1,21 +1,37 @@
-<p>
-  <strong>User:</strong>
-  <%= @submit.user_id %>
-</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Exercise</th>
+        <th>Result</th>
+        <th>Date</th>
+        <th>User</th>
+        <th>Try count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= link_to(@submit.id, @submit)%></td>
+        <td><%= link_to @submit.exercise.title, @submit.exercise %></td>
+        <td><% if @submit.result == "Success!" %>
+          <span class="label label-success">Success!</span>
+        <% elsif @submit.result == "Wrong Answer" %>
+          <span class="label label-warning">Wrong Answer</span>
+        <% elsif @submit.result == "Complie Error" %>
+          <span class="label label-danger">Compile Error</span>
+        <% else %>
+          <span class="label label-danger">Unknown Error</span>
+        <% end %></td>
+        <td><%= @submit.created_at %></td>
+        <td><%= @submit.user.email %></td>
+        <td><%= @submit.try_count %></td>
+      </tr>
+    </tbody>
+  </table>
 
 <p>
-  <strong>Exercise:</strong>
-  <%= @submit.exercise_id %>
-</p>
-
-<p>
-  <strong>Result:</strong>
-  <%= @submit.result %>
-</p>
-
-<p>
-  <strong>Try count:</strong>
-  <%= @submit.try_count %>
+  <strong>Code</strong>
+  <pre><%= @submit.content %></pre>
 </p>
 
 <%= link_to 'Back', submits_path %>

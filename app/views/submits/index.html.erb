@@ -14,6 +14,7 @@
         <th>Exercise</th>
         <th>Result</th>
         <th>Date</th>
+        <th>User</th>
         <th>Try count</th>
       </tr>
     </thead>
@@ -22,8 +23,17 @@
         <tr>
           <td><%= link_to(submit.id, submit)%></td>
           <td><%= link_to submit.exercise.title, submit.exercise %></td>
-          <td><%= submit.result %></td>
+          <td><% if submit.result == "Success!" %>
+            <span class="label label-success">Success!</span>
+          <% elsif submit.result == "Wrong Answer" %>
+            <span class="label label-warning">Wrong Answer</span>
+          <% elsif submit.result == "Complie Error" %>
+            <span class="label label-danger">Compile Error</span>
+          <% else %>
+            <span class="label label-danger">Unknown Error</span>
+          <% end %></td>
           <td><%= submit.created_at %></td>
+          <td><%= submit.user.email %></td>
           <td><%= submit.try_count %></td>
         </tr>
       <% end %>

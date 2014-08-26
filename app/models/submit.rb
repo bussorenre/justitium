@@ -20,7 +20,7 @@ class Submit < ActiveRecord::Base
         FileUtils.mkdir_p(dirname)
       end
       File.open(full_path, "wb") do |f|
-        f.write self.file.read
+        f.write self.content
       end
     end
 
