@@ -3,6 +3,8 @@ require 'fileutils'
 class Submit < ActiveRecord::Base
   attr_accessor :file
 
+  validates :exercise_id, presence: true
+
   belongs_to :user
   belongs_to :exercise
 
