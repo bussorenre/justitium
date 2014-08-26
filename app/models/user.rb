@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     # file upload
     def create_directory
       Dir.mkdir(full_path)
+      
     end
 
     def destroy_file

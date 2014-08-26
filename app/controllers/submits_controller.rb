@@ -1,5 +1,6 @@
 class SubmitsController < ApplicationController
   before_action :set_submit, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /submits
   # GET /submits.json
