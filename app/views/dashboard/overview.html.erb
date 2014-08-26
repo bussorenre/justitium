@@ -4,7 +4,7 @@
   <% @exercises.each do |exercise| %>
   <div class="col-xs-6 col-sm-3 placeholder">
     <img src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail" width=200 height=200>
-    <h4><%= exercise.title %></h4>
+    <h4><%= link_to exercise.title, exercise %></h4>
     <span class="text-muted"><%= exercise.unique_name %></span>
   </div>
   <% end %>
@@ -25,7 +25,7 @@
     <tbody>
       <% @submits.each do |submit| %>
         <tr>
-          <td><%= submit.id %></td>
+          <td><%= link_to(submit.id, submit)%></td>
           <td><%= link_to submit.exercise.title, submit.exercise %></td>
           <td><%= submit.result %></td>
           <td><%= submit.created_at %></td>
@@ -34,4 +34,5 @@
       <% end %>
     </tbody>
   </table>
+  <%= link_to 'See all submits', submits_path %>
 </div>

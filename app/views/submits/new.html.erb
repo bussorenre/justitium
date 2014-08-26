@@ -1,4 +1,5 @@
-<h1>New submit</h1>
+<h2 class="sub-header">New Submit</h2>
+<div class="form-responsive">
 
 <%= form_for(@submit) do |f| %>
   <% if @submit.errors.any? %>
@@ -15,7 +16,7 @@
 
   <div class="field">
     <%= f.label :exercise_id %><br>
-    <%= f.collection_select :exercise_id, Exercise.all, :id, :title, include_blank: 'Please select submit exercise' %>
+    <%= f.collection_select :exercise_id, Exercise.all, :id, :title, include_blank: 'Please select submit exercise', autofocus: true, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :file %><br>
@@ -27,3 +28,5 @@
 <% end %>
 
 <%= link_to 'Back', submits_path %>
+
+</div>
