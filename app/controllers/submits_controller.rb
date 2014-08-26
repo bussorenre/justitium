@@ -52,6 +52,6 @@ class SubmitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def submit_params
-      params.require(:submit).permit(:user_id, :exercise_id, :result, :try_count)
+      params.require(:submit).permit(:user_id, :exercise_id, :result, :try_count, :file)
     end
 end

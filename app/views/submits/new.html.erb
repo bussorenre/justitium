@@ -18,14 +18,10 @@
     <%= f.collection_select :exercise_id, Exercise.all, :id, :title, include_blank: 'Please select submit exercise' %>
   </div>
   <div class="field">
-    <%= f.label :result %><br>
-    <%= f.text_field :result %>
+    <%= f.label :file %><br>
+    <%= f.file_field :file %>
   </div>
-  <div class="field">
-    <%= f.label :try_count %><br>
-    <%= f.number_field :try_count %>
-  </div>
-  <div class="actions">
+    <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
