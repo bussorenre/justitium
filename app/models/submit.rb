@@ -27,7 +27,7 @@ class Submit < ActiveRecord::Base
     def destroy_file
       begin
         # File.unlink full_path
-        
+
       rescue
         nil
       end
@@ -37,19 +37,37 @@ class Submit < ActiveRecord::Base
       return Rails.root.join('public/submits/').to_s + self.user.email + "/" + self.exercise.unique_name + ".c"
     end
 
+
+    def target_path
+      return Rails.root.join('public/exercises/').to_s + self.exercise.unique_name
+    end
+
     # judge files
     def judge_file
       dir = File.dirname(full_path)
       t = File.basename(full_path, ".c")
       Dir.chdir(dir) do
-        puts "Log - #{dir}"
         IO.popen("gcc -o exe_#{t} #{t}.c") do |msg|
           if $?.to_i != 0
             self.result = "Compile Error"
             self.save
             return false
           end
-          self.result = "Success"
+        end
+        Dir.glob(target_path + "/input/*").each do |input_path|
+          output_path = input_path.gsub(/input/, 'output')
+          tmp = File.join(dir, "output.txt") 
+          puts "Log - #{input_path}"
+          if !spawn("./exe_#{t}", :in=>input_path, :out=>[tmp, "w"])
+            puts "Log - Executing Error!!!!"
+          end
+          if !spawn("diff #{output_path} #{tmp}")
+            puts "Log - Wrong Answer!"
+            self.result = "Wrong Answer"
+            self.save
+            return false
+          end
+          self.result = "Success!"
           self.save
         end
 
