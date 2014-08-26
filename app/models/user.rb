@@ -12,7 +12,14 @@ class User < ActiveRecord::Base
     # file upload
     def create_directory
       Dir.mkdir(full_path)
-      
+      Dir.chdir(full_path) do
+        spawn("git init")
+        File.open(".gitignore", "w") do |file|
+          file.puts "exe_*"
+          file.puts "output.txt"
+          file.close
+        end
+      end
     end
 
     def destroy_file

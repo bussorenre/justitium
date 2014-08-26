@@ -47,6 +47,8 @@ class Submit < ActiveRecord::Base
       dir = File.dirname(full_path)
       t = File.basename(full_path, ".c")
       Dir.chdir(dir) do
+        spawn("git add .")
+        spawn("git commit -m \"modified #{t}.c\"")
         IO.popen("gcc -o exe_#{t} #{t}.c") do |msg|
           if $?.to_i != 0
             self.result = "Compile Error"

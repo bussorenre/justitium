@@ -169,8 +169,8 @@ body {
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><%= link_to "Overview", dashboard_path %></li>
-            <li><a href="#">Submits</a></li>
+            <li><%= link_to "Overview", dashboard_path %></li>
+            <li><%= link_to "Submit", new_submit_path %></li>
           </ul>
           <ul class="nav nav-sidebar">
           <% @exercises.each do |exercise| %>
