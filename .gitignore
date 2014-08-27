@@ -17,3 +17,5 @@
 
 # ignore public directory
 /public/submits/*
+
+# ignore Gemfile.lock

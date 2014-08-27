@@ -1,6 +1,3 @@
-02: FizzBuzz
-============
-
 概要
 ------
 この問題では、if-else による基本的な条件分岐が出来るかを測る。
@@ -31,25 +28,23 @@ N （1 <= N <= 10000）
 
 入力例1
 -----------
-15
-
+    15
 
 出力例1
 -----------
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-
+    1
+    2
+    Fizz
+    4
+    Buzz
+    Fizz
+    7
+    8
+    Fizz
+    Buzz
+    11
+    Fizz
+    13
+    14
+    FizzBuzz
 
