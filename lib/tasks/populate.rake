@@ -25,7 +25,7 @@ namespace :db do
     # Create Experiment Users
     5.times do |i|
       user = User.new
-      user.email = "de%04d@experiment.edu" % [i+1]
+      user.email = "de%03d@exp.edu" % [i+1]
       user.password = SecureRandom.hex[0..8]
       user.password_confirmation = user.password
       file.puts "#{user.email}, #{user.password}"
