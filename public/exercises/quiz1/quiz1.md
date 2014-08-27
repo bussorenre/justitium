@@ -26,21 +26,21 @@
 
 入力例1
 -----------
-This is a pen.
+    This is a pen.
 
 
 出力例1
 -----------
-This is a pen.
+    This is a pen.
 
 
 入力例2
 -----------
-Hello, World!
+    Hello, World!
 
 
 
 出力例2
 -----------
-Hello, World!
+    Hello, World!
 

@@ -31,21 +31,21 @@
 
 入力例1
 -----------
-This is a pen.
+    This is a pen.
 
 
 出力例1
 -----------
-0
+    0
 
 
 入力例1
 -----------
-I saw the movie in that theater.
+    I saw the movie in that theater.
 
 
 出力例1
 -----------
-2
+    2
 
 

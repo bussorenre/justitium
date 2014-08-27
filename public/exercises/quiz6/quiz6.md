@@ -1,6 +1,3 @@
-06: palindrome
-============
-
 概要
 ------
 この問題では、文字列が扱えるかを判定する。
@@ -33,20 +30,20 @@ YES or NO
 
 入力例1
 -----------
-This is a Pen!
+    This is a Pen!
 
 
 出力例1
 -----------
-NO
+    NO
 
 
 入力例1
 -----------
-Borrow or rob?
+    Borrow or rob?
 
 出力例1
 -----------
-YES
+    YES
 
 
