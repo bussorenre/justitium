@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
         product += x[i]*y[i];
     }
 
-    printf("%0.6lf", product);
+    printf("%0.6lf\n", product);
 
     return 0;
 }
