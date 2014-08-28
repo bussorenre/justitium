@@ -35,6 +35,9 @@ gem 'execjs'
 # markdown preview
 gem 'redcarpet'
 
+# for gcc compile
+gem 'systemu'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 # gem 'spring',        group: :development
 
@@ -49,3 +52,4 @@ gem 'redcarpet'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+

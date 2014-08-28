@@ -17,7 +17,7 @@
           <span class="label label-success">Success!</span>
         <% elsif @submit.result == "Wrong Answer" %>
           <span class="label label-warning">Wrong Answer</span>
-        <% elsif @submit.result == "Complie Error" %>
+        <% elsif @submit.result == "Compile Error" %>
           <span class="label label-danger">Compile Error</span>
         <% else %>
           <span class="label label-danger">Unknown Error</span>
@@ -35,3 +35,4 @@
 </p>
 
 <%= link_to 'Back', submits_path %>
+

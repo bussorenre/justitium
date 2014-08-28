@@ -1,7 +1,10 @@
 require 'fileutils'
+require 'systemu'
 
 class Submit < ActiveRecord::Base
   attr_accessor :file
+  include ActiveModel::Validations
+  validate :check_file
 
   validates :exercise_id, presence: true
 
@@ -13,6 +16,16 @@ class Submit < ActiveRecord::Base
   after_create :judge_file
 
   private
+    def check_file
+      if file == nil
+        errors.add(:file, "must be not empty")
+        return false
+      end
+      errors.add(:file, "too large file size") if file.size > 1024*1024
+      errors.add(:file, "upload file must be '.c' ") if File.extname(file.original_filename) != ".c"
+      return false if errors.messages
+    end
+
     # file upload
     def store_file
       dirname = File.dirname(full_path)
@@ -47,24 +60,35 @@ class Submit < ActiveRecord::Base
       dir = File.dirname(full_path)
       t = File.basename(full_path, ".c")
       Dir.chdir(dir) do
+
+        # git の実行
         spawn("git add .")
         spawn("git commit -m \"modified #{t}.c\"")
-        IO.popen("gcc -o exe_#{t} #{t}.c") do |msg|
-          if $?.to_i != 0
-            self.result = "Compile Error"
-            self.save
-            return false
-          end
+
+        # gcc の実行
+        looper = "gcc -o exe_#{t} #{t}.c"
+        status, stdout, stderr = systemu looper
+        if status.exitstatus.to_i != 0
+          self.result = "Compile Error"
+          self.save
+          return false
         end
+
+        # 解答のチェック
         Dir.glob(target_path + "/input/*").each do |input_path|
           output_path = input_path.gsub(/input/, 'output')
           tmp = File.join(dir, "output.txt") 
           puts "Log - #{input_path}"
-          if !spawn("./exe_#{t}", :in=>input_path, :out=>[tmp, "w"])
-            puts "Log - Executing Error!!!!"
+
+          # 実際に実行してみる。
+          status, stdout, stderr = systemu "./exe_#{t} < #{input_path} > #{tmp}" do |cid|
+            sleep 3
+            Process.kill 9, cid
           end
-          if !spawn("diff #{output_path} #{tmp}")
-            puts "Log - Wrong Answer!"
+
+          # diff を取ってエラーかどうかを確認する
+          status, stdout, stderr = systemu "diff #{output_path} #{tmp}"
+          if status.exitstatus.to_i != 0
             self.result = "Wrong Answer"
             self.save
             return false

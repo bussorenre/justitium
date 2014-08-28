@@ -111,6 +111,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    systemu (2.6.4)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -150,6 +151,7 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  systemu
   therubyracer
   turbolinks
   twitter-bootstrap-rails
