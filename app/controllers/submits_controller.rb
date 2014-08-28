@@ -24,10 +24,14 @@ class SubmitsController < ApplicationController
     @submit = Submit.new(submit_params)
     @submit.user = current_user
 
+    # save the file
     upload_file = submit_params[:file]
     if upload_file != nil
       @submit.content = upload_file.read
     end
+
+    # count try count
+    @submit.try_count =Submit.where(exercise_id: @submit.exercise_id, user_id: @submit.user_id, ).count
 
     respond_to do |format|
       if @submit.save
