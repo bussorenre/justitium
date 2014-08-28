@@ -27,8 +27,6 @@ int combination(int n, int r)
         return( combination(n-1, r-1) + combination(n-1, r) );
 }
 
-
-
 int main(int argc, char const *argv[])
 {
     int N, R;

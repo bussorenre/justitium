@@ -19,7 +19,7 @@
 
 入力
 -----------
-1 <= N <= 100 行の文字列の集合
+100行以下の文書
 
 
 出力
@@ -57,5 +57,17 @@ the が出現した回数
 出力例3
 -----------
     4
+
+
+
+入力例4
+-----------
+    The balding middle-aged man asked his barber, “Why charge me the full price for cutting my hair — there’s so little of it.”
+    “Well, “said the barber, “actually I make little charge for cutting it. What you’re paying for is my searching for it!”
+
+
+出力例4
+-----------
+    3
 
 
