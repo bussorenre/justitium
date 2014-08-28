@@ -82,8 +82,13 @@ class Submit < ActiveRecord::Base
 
           # 実際に実行してみる。
           status, stdout, stderr = systemu "./exe_#{t} < #{input_path} > #{tmp}" do |cid|
-            sleep 3
-            Process.kill 9, cid
+            begin
+              Timeout::timeout(3) do
+                # sleep 3
+              end
+            rescue Timeout::Error
+              Process.kill 9, cid
+            end
           end
 
           # diff を取ってエラーかどうかを確認する
