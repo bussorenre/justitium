@@ -19,3 +19,4 @@
 /public/submits/*
 
 # ignore Gemfile.lock
+Gemfile.lock
