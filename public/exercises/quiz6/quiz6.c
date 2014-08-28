@@ -29,7 +29,6 @@ int main(int argc, char const *argv[])
         }
         i++;
     }
-    printf("%s\n", nospace);
     for (i = 0; i < j/2; i++)
     {
         if (nospace[i] != nospace[j-i-1])
