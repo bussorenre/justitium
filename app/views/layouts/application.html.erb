@@ -158,7 +158,7 @@ body {
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Overview", dashboard_path %></li>
-            <li><%= link_to "New Submit", new_submit_path %></li>
+            <li><%= link_to "Submit Answer", new_submit_path %></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
           </ul>
         </div>
@@ -170,7 +170,6 @@ body {
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li><%= link_to "Overview", dashboard_path %></li>
-            <li><%= link_to "New Submit", new_submit_path %></li>
           </ul>
           <ul class="nav nav-sidebar">
           <% @exercises.each do |exercise| %>

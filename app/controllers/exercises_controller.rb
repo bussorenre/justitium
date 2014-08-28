@@ -11,6 +11,8 @@ class ExercisesController < ApplicationController
   # GET /exercises/1
   # GET /exercises/1.json
   def show
+    @submit = Submit.new
+    @submit.exercise = @exercise
   end
 
   # GET /exercises/new

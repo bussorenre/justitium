@@ -5,3 +5,32 @@
 <%= raw markdown.render(@exercise.content_body) %> 
 
 </p>
+
+
+<div class="form-responsive">
+<h2 class="sub-header">Submit</h2>
+<div class="row">
+<%= form_for(@submit) do |f| %>
+  <% if @submit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@submit.errors.count, "error") %> prohibited this submit from being saved:</h2>
+
+      <ul>
+      <% @submit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions col-md-4">
+    <%= f.hidden_field :exercise_id %>
+    <%= f.file_field :file %>
+    <%= f.submit :class => "btn btn-info btn-block", :value => "Submit Answer" %>
+  </div>
+<% end %>
+</div>
+
+<%= link_to 'Back', dashboard_path %>
+
+</div>
