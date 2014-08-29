@@ -5,7 +5,7 @@ class SubmitsController < ApplicationController
   # GET /submits
   # GET /submits.json
   def index
-    @submits = Submit.where(user_id: current_user.id).order("created_at DESC")
+    @submits = Submit.where(user_id: current_user.id)
   end
 
   # GET /submits/1

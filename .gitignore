@@ -16,7 +16,7 @@
 /tmp
 
 # ignore public directory
-/public/submits/*
+/public/submits/*/*
 
 # ignore Gemfile.lock
 Gemfile.lock

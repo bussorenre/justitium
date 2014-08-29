@@ -15,6 +15,9 @@ class Submit < ActiveRecord::Base
   before_destroy :destroy_file
   after_create :judge_file
 
+  # default scope
+  default_scope { order('created_at DESC') }
+
   private
     def check_file
       if file == nil
