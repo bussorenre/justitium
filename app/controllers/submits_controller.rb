@@ -31,7 +31,7 @@ class SubmitsController < ApplicationController
     end
 
     # count try count
-    @submit.try_count =Submit.where(exercise_id: @submit.exercise_id, user_id: @submit.user_id, ).count
+    @submit.try_count =Submit.where(exercise_id: @submit.exercise_id, user_id: @submit.user_id, ).count + 1
 
     respond_to do |format|
       if @submit.save

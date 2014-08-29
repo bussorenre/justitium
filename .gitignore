@@ -13,10 +13,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/*.csv
 /tmp
 
 # ignore public directory
-/public/submits/*/*
+/public/submits/*
 
 # ignore Gemfile.lock
 Gemfile.lock

@@ -1,49 +1,69 @@
 概要
 ------
-この問題では、実験全体を通して必要な入出力の技術を問う。
+この問題は例題である。
+実験全体を通して必要な入出力の技術を問う。
 
 ### 必要な知識
-* fgets()
+* scanf()
 * printf()
-* ループ処理
 
 
 問題
 ------
 ※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。
 
-入力から受け取った文字列をそのまま出力するプログラムを作成せよ。
-※ 入力はスティーブ・ジョブスのスピーチの全文のような非常に長いものも存在する。
+2つの整数値 aとbが入力される。  
+a+bを出力するプログラムを作成せよ。  
+なお、出力の最後には必ず改行コードをつけること。  
+
+参考
+-----------
+標準入力から一つの整数を受け取るにはscanf関数を用いる。
+
+    int a;
+    scanf("%d", &a);
+
+改行コードを出力するには\nを用いる。
+
+    printf("\n");
+
+ソースコードを提出する時、以下のように余計な出力をするとWrong Answerとなってしまうので注意。
+
+    /* This code will be Error */
+    printf("A + B is %d\n", answer);
+
+    /* This code will pass Judge system */
+    printf("%d\n", answer);
 
 
 入力
 -----------
-100行以下の文書
+2つの整数値（0 <= A <= 10000, 0 <= B <= 10000）  
+A B
+
 
 
 出力
 -----------
-100行以下の文書
+A+B
 
 
 入力例1
 -----------
-    This is a pen.
+    10 5
 
 
 出力例1
 -----------
-    This is a pen.
+    15
 
 
 入力例2
 -----------
-    The balding middle-aged man asked his barber, “Why charge me the full price for cutting my hair — there’s so little of it.”
-    “Well, “said the barber, “actually I make little charge for cutting it. What you’re paying for is my searching for it!”
+    -5 3
 
 
 出力例2
 -----------
-    The balding middle-aged man asked his barber, “Why charge me the full price for cutting my hair — there’s so little of it.”
-    “Well, “said the barber, “actually I make little charge for cutting it. What you’re paying for is my searching for it!”
+    -2
 

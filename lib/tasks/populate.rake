@@ -17,7 +17,7 @@ namespace :db do
     1.times do 
       user = User.new
       user.email = "bussorenre0088@gmail.com"
-      user.password = "chiimama"
+      user.password = "password"
       user.password_confirmation = user.password
       user.save
     end
@@ -35,7 +35,7 @@ namespace :db do
 
     # Exercise titles
     titles = {
-      'quiz1' => 'Input and Output',
+      'quiz1' => 'Add number',
       'quiz2' => 'FizzBuzz',
       'quiz4' => 'Leap Year',
       'quiz5' => 'Inner Product',

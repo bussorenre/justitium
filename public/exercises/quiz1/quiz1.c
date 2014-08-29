@@ -17,8 +17,9 @@
 
 int main(int argc, char const *argv[])
 {
-    char sentence[1024];
-    while( fgets(sentence, 1024, stdin) != NULL)
-        printf("%s",sentence);
+    int a,b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    printf("%d\n", a+b);
     return 0;
 }
