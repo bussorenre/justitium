@@ -1,6 +1,6 @@
 /**********************************************************************
 
-  quiz1.c - 01: input and output
+  quiz1.c - 01: Add number
 
   Ryo Matsumoto
     - Data Engineering Lab
