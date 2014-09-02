@@ -3,5 +3,6 @@ class DashboardController < ApplicationController
 
   def overview
     @submits = Submit.where(user_id: current_user.id).limit(5)
+    @badges = current_user.badges
   end
 end

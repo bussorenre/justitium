@@ -4,11 +4,23 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :submit
+  has_many :badges
 
 
   before_create :create_directory
+  after_create :create_badges
 
   private
+    # Badge create
+    def create_badges
+      Exercise.all.each do |exercise|
+        badge = Badge.new
+        badge.exercise = exercise
+        badge.user = self
+        badge.save
+      end
+    end
+
     # file upload
     def create_directory
       Dir.mkdir(full_path)

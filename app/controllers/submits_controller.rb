@@ -35,6 +35,13 @@ class SubmitsController < ApplicationController
 
     respond_to do |format|
       if @submit.save
+        # Badge 認定
+        if @submit.result == "Success!"
+          badge = Badge.where(exercise_id: @submit.exercise_id, user_id: @submit.user_id )[0]
+          badge.certification = 1
+          badge.save
+        end
+
         format.html { redirect_to @submit, notice: 'Submit was successfully created.' }
         format.json { render :show, status: :created, location: @submit }
       else

@@ -1,0 +1,11 @@
+<h1 class="page-header">Questionnaire</h1>
+
+<div class="row placeholders">
+  <% @exercises.each do |exercise| %>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <%= image_tag "notaward.png", :class => "img-responsive", :width=>200, :height=>200 %>
+    <h4><%= link_to exercise.title, exercise %></h4>
+    <span class="text-muted"><%= exercise.unique_name %></span>
+  </div>
+  <% end %>
+</div>

@@ -10,6 +10,28 @@ namespace :db do
     # submits ディレクトリの削除を行う
     spawn("rm -rf #{Rails.root.join("public","submits", "*")}")
     
+    # Exercise titles
+    titles = {
+      'quiz1' => 'Add number',
+      'quiz2' => 'FizzBuzz',
+      'quiz4' => 'Leap Year',
+      'quiz5' => 'Inner Product',
+      'quiz6' => 'Palindrome',
+      'quiz7' => 'Sorting',
+      'quiz8' => 'Combination nCr',
+      'quiz9' => 'find a phrase "the"'
+    }
+
+    # Create Exercise models
+    Dir.glob(Rails.root.join('public/exercises/*/*.md')).each do |exercise_path|
+      exf = File.basename(exercise_path, ".md")
+      exercise = Exercise.new
+      exercise.unique_name = exf
+      exercise.title = titles[exercise.unique_name]
+      exercise.content_body = open(exercise_path, "r").read
+      exercise.save
+    end
+    
     # open CSV files
     file = File::open(Rails.root.join("log","populate.csv"), "w")
 
@@ -32,30 +54,6 @@ namespace :db do
       user.save
     end
     file.close
-
-    # Exercise titles
-    titles = {
-      'quiz1' => 'Add number',
-      'quiz2' => 'FizzBuzz',
-      'quiz4' => 'Leap Year',
-      'quiz5' => 'Inner Product',
-      'quiz6' => 'Palindrome',
-      'quiz7' => 'Sorting',
-      'quiz8' => 'Combination nCr',
-      'quiz9' => 'find a phrase "the"'
-    }
-
-
-    # Create Exercise models
-    Dir.glob(Rails.root.join('public/exercises/*/*.md')).each do |exercise_path|
-      exf = File.basename(exercise_path, ".md")
-      exercise = Exercise.new
-      exercise.unique_name = exf
-      exercise.title = titles[exercise.unique_name]
-      exercise.content_body = open(exercise_path, "r").read
-      exercise.save
-    end
-    
 
   end
 end

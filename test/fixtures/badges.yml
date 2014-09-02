@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  exercise_id: 
+  level: 1
+  meta: 1
+  certification: 1
+
+two:
+  user_id: 
+  exercise_id: 
+  level: 1
+  meta: 1
+  certification: 1

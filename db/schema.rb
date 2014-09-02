@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140826084810) do
+ActiveRecord::Schema.define(version: 20140902090747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "badges", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "exercise_id"
+    t.integer  "level"
+    t.integer  "meta"
+    t.integer  "certification"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "badges", ["exercise_id"], name: "index_badges_on_exercise_id", using: :btree
+  add_index "badges", ["user_id"], name: "index_badges_on_user_id", using: :btree
 
   create_table "exercises", force: true do |t|
     t.string   "unique_name"
@@ -23,6 +36,20 @@ ActiveRecord::Schema.define(version: 20140826084810) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "medals", force: true do |t|
+    t.integer  "exercise_id"
+    t.integer  "user_id"
+    t.integer  "metacongnize"
+    t.integer  "submit_id"
+    t.integer  "target_badge"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "medals", ["exercise_id"], name: "index_medals_on_exercise_id", using: :btree
+  add_index "medals", ["submit_id"], name: "index_medals_on_submit_id", using: :btree
+  add_index "medals", ["user_id"], name: "index_medals_on_user_id", using: :btree
 
   create_table "submits", force: true do |t|
     t.integer  "user_id"
