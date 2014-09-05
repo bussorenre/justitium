@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: justitium_production
-  username: justitium
-  password: <%= ENV['JUSTITIUM_DATABASE_PASSWORD'] %>
+#  username: justitium
+#  password: <%= ENV['JUSTITIUM_DATABASE_PASSWORD'] %>
