@@ -1,33 +1,32 @@
 
-概要
+Summary
 ------
-この問題では、配列のソートが出来るかどうかを測る
+This exercise checks the programming skill to utilize array.
 
-### 必要な知識
-* 配列
+### Required knowledge
+* Array
+* sorting algorithm
 
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。  
-標準入力から整数Nと、N個の正の整数が与えられる。  
+Write a program which sort some integers.  
+you can get an integer N and N integers from the standard input.  
+Sorts in ascending order numbers N number, print all.  
 
-N個の数値を昇順にソートし、出力せよ。  
 
 
-入力
+Input 
 -----------
 N (1 <= N <= 1000)  
-N個の正の整数
+N numbers
 
-
-出力
+Output
 -----------
-N個の正の整数  
-（昇順でソートされた物）
+N numbers order by ascending.  
 
 
-入力例1
+Sample input
 -----------
     10
     10
@@ -43,7 +42,7 @@ N個の正の整数
 
 
 
-出力例1
+Sample output 
 -----------
     1
     2

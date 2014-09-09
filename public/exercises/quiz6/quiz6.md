@@ -1,50 +1,51 @@
-概要
+Summary
 ------
-この問題では、文字列が扱えるかを判定する。
+This exercise checks the programing skill to utilize strings.
 
-### 必要な知識
-* 配列
-* 文字列
-* ポインタ
+### Required Knowledge
+* Array
+* Strings
+* Pointer
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。
+Make a program which prints YES, if a sentence is palindrome. Otherwise, it should print NO.  
 
-入力から文字列が与えられる。
+You can get a sentence from standard input.
 
-入力された文字列が回文ならYES、そうでなければNOと出力するプログラムを作成せよ。  
-なお、英字以外の文字は全て無視して構わない。  
-大文字と小文字は区別しない。  
+It does not matter if you ignore any non-alphabetic character.   
+It's not case-sensitive.
 
 
-入力
+Input
 -----------
-文字列（1024文字以下の英文）
+A sentence.
 
 
-出力
+Output
 -----------
 YES or NO  
-※ Yes or No であったり、yes or no では正常に判定出来ない。  
-※ 必ず最後に改行コードを入れること。  
+
+Please print capital "YES" or "NO".  
+If you print "Yes" or "No", they will be judged as "Wrong Answer"  
+Do not forget to print a new line code at the end.  
 
 
-入力例1
+Sample input 1
 -----------
     This is a Pen!
 
 
-出力例1
+Sample output 1
 -----------
     NO
 
 
-入力例1
+Sample input 2
 -----------
     Borrow or rob?
 
-出力例1
+Sample output 2
 -----------
     YES
 

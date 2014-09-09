@@ -1,36 +1,40 @@
-概要
+Summary
 ------
-この問題では、if-else による基本的な条件分岐が出来るかを測る。
+This exercise checks the programming skill to utilize conditional statement.
 
-### 必要な知識
-* 分岐処理
-* 演算子
+### Required knowledge
+* if-else statement
+* basic opperations ( +, -, *, /, %,  and others)
 
-
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。
-
-整数Nをが入力から与えられる。  
-1からNまで、値を順に出力していく。  
-ただし、その数が3で割り切れるならFizz を、 5で割り切れるならBuzzを、3と5の両方で割り切れるならFizzBuzz を、それぞれ出力する。  
 
 
-入力
+You can get an integer, N,  from the standard input.  
+FizzBuzz problem founds on a traditional English game for kids.  
+Print all numbers 1 to N, in the ascending order.  
+However, there are rules to handel the following exceptions;  
+
+* print "Fizz" instead of the number for a multiples of 3,  
+* print "Buzz" instead of the number for a multiples of 5, and  
+* print "FizzBuzz" instead of the number for a multiple of both 3 and 5.
+
+
+
+Input
 -----------
-N （1 <= N <= 10000）
+integer N （1 <= N <= 10000）
 
-
-出力
+Output
 -----------
-1からNまでの値の印字
+integers between 1 and N, or the keywords concicting of Fizz, Buzz, and FizzBuzz.
 
 
-入力例1
+sample input
 -----------
     15
 
-出力例1
+sample output
 -----------
     1
     2

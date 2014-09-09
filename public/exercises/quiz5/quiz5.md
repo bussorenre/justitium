@@ -1,47 +1,46 @@
-概要
+Summary
 ------
-この問題では、配列が扱えるかを測る
+This exercise checks the programming skill to utilize array.
 
-### 必要な知識
-* 配列
-* フォーマット指定子
+### Required knowledge
+* Array
+* format specifiers
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。
 
-整数Nをが入力から与えられる。  
-2行目にはベクトルXの内容が  
-3行目にはベクトルYの内容がそれぞれ与えられる。  
-
-ベクトルXとベクトルYの内積を求めて、出力せよ
+Write a program which calculate and print a dot product of two vectors A and B.  
+You can get an integer, N, from the standard input at first.  
+after N, you can get components of vector A and components of vector B.  
 
 
-入力
+
+
+Input
 -----------
-N (1 <= N <= 1000)  
-X(N次元)  
-Y(N次元)  
+integer N (1 <= N <= 1000) at 1st line.
+components of vector A (N-dimencional vector) at 2nd line.
+components of vector B (N-dimencional vector) at 3rd line.
 
 
-出力
+
+Output
 -----------
-XとYの内積  
+dot product of A and B  
 （小数点以下6桁まで表示）  
 小数点以下の数を指定するには以下のようなコードを記述する。
 
     printf("%0.6f\n", answer);
 
+Do not forget to print a new line code at the end.  
 
-※ 必ず最後に改行コードを入れること。  
-
-入力例1
+Sample input
 -----------
     3
     0.1 0.2 0.3
     0.1 0.2 0.3
 
 
-出力例1
+sample output
 -----------
     0.140000

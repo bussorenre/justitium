@@ -1,61 +1,71 @@
-概要
+Summary
 ------
-この問題では基本的な関数の使い方ができるかを測る。
+This exercise checks the programing skill to utilize function calls.
 
-### 必要な知識
-* 関数
-* 演算子
-* 分岐処理
+### Required knowledge
+* function
+* basic opperations
+* if-else statement
 
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。  
-標準入力から受け取った整数Nが、うるう年かどうかを判別し、うるう年ならばYES、うるう年でなければNOと出力するプログラムを作成せよ。  
+A leap year is a year containing one additional day in order to keep the calendar year synchronized with the astronomical or seasonal year.  
+In the Gregorian calendar, the following criteria must be taken into account to identify leap years:
 
-なお、うるう年とは、「2004年」などの４で割り切れる年で、かつ「2100年」のような100で割り切れる年ではなく、かつ「2000年」のような400で割り切れる年の事を示す。  　
+A year is a leap year, if
+* it is evenly divisible by 4, 
+* it is not evenly divisible by 100, and
+* it is evenly divisible by 400.
 
-うるう年かどうかを判定する関数を以下のプロトタイプ宣言に従って作成せよ  
+This means that 2000 and 2400 are leap years, while 1800, 1900, 2100, 2200, 2300 and 2500 are NOT leap years.
+
+Make a program which prints YES, if an integer, N, corresponds to a leap year. Otherwise, it should print NO.
+
+You can get an integer, N, from standard input.  
+please use following prototype declaration to find leap years.  
 
     int leap_year(int year);
 
-入力
+Input
 -----------
 N (1 <= N <= 10000)
 
 
-出力
+Output
 -----------
-YES もしくは NO  
-※ Yes や No であったり、yes や no では正常に判定出来ない。  
-※ 必ず最後に改行コードを入れること。  
+YES or NO  
+
+Please print capital "YES" or "NO".  
+If you print "Yes" or "No", they will be judged as "Wrong Answer"  
+Do not forget to print a new line code at the end.  
 
 
-入力例1
+sample input 1
 -----------
     2004
 
 
-出力例1
+sample output 1
 -----------
     YES
 
 
-入力例2
+sample input 2
 -----------
     2100
 
 
-出力例2
+sample output 2
 -----------
     NO
 
 
-入力例3
+sample input 3
 -----------
     2000
 
 
-出力例3
+sample output 3
 -----------
     YES
