@@ -48,7 +48,7 @@ namespace :db do
     50.times do |i|
       user = User.new
       user.email = "de%03d@exp.edu" % [i+1]
-      user.password = SecureRandom.hex[0..8]
+      user.password = "%02d%02d%02d%02d" % [i+1, i+1, i+1, i+1]
       user.password_confirmation = user.password
       file.puts "#{user.email}, #{user.password}"
       user.save
