@@ -1,61 +1,61 @@
 
-概要
+Summary
 ------
-この問題では、関数の再帰が出来るかどうかを測る
+This exercise checks the programing skill to utilize recursive function calls.
 
-### 必要な知識
-* 関数
-* 再帰
+### Required knowledge
+* function
+* recurcive call
 
 
-問題
+Problem
+-------
+
+Write a program taking 2 integers, and print the combination nCr.  
+  
+
+Hint
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。  
-標準入力から整数nと整数rが与えられる。  
-nCr を出力するプログラムを作成せよ  
-
-備考
-------
-nCr は以下の漸化式で表すことが出来る。
+nCr can be represented in recursion
 
     nC0=1
     nCn=1
     nCr=(n-1Cr-1)+(n-1Cr)
 
-この事を参考に、nCrを求める関数を以下のプロトタイプ宣言に従って作成せよ  
+please use following prototype declaration to caliculate combination.  
 
     int combination(int n, int r);
 
 
-入力
+Input
 -----------
 n r  
 （1 <= n, r <= 30）
 
 
-出力
+Output
 -----------
 nCr  
-※ 必ず最後に改行コードを入れること。
+Do not forget to print a new line code at the end.  
 
 
-入力例1
+Sample input 1
 -----------
     5 2
 
 
-出力例1
+Sample output 1
 -----------
     10
 
 
 
-入力例1
+Sample input 2
 -----------
     10 1
 
 
-出力例1
+Sample output 2
 -----------
     10
 

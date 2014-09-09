@@ -37,20 +37,6 @@ ActiveRecord::Schema.define(version: 20140902090747) do
     t.datetime "updated_at"
   end
 
-  create_table "medals", force: true do |t|
-    t.integer  "exercise_id"
-    t.integer  "user_id"
-    t.integer  "metacongnize"
-    t.integer  "submit_id"
-    t.integer  "target_badge"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "medals", ["exercise_id"], name: "index_medals_on_exercise_id", using: :btree
-  add_index "medals", ["submit_id"], name: "index_medals_on_submit_id", using: :btree
-  add_index "medals", ["user_id"], name: "index_medals_on_user_id", using: :btree
-
   create_table "submits", force: true do |t|
     t.integer  "user_id"
     t.integer  "exercise_id"

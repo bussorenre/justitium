@@ -15,7 +15,7 @@ namespace :db do
       'quiz1' => 'Add number',
       'quiz2' => 'FizzBuzz',
       'quiz4' => 'Leap Year',
-      'quiz5' => 'Inner Product',
+      'quiz5' => 'Dot Product',
       'quiz6' => 'Palindrome',
       'quiz7' => 'Sorting',
       'quiz8' => 'Combination nCr',
@@ -23,7 +23,7 @@ namespace :db do
     }
 
     # Create Exercise models
-    Dir.glob(Rails.root.join('public/exercises/*/*.md')).each do |exercise_path|
+    Dir.glob(Rails.root.join('public/exercises/*/quiz?.md')).each do |exercise_path|
       exf = File.basename(exercise_path, ".md")
       exercise = Exercise.new
       exercise.unique_name = exf
@@ -45,7 +45,7 @@ namespace :db do
     end
 
     # Create Experiment Users
-    5.times do |i|
+    50.times do |i|
       user = User.new
       user.email = "de%03d@exp.edu" % [i+1]
       user.password = SecureRandom.hex[0..8]

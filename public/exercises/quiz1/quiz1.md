@@ -1,33 +1,36 @@
-概要
+Summary
 ------
-この問題は例題である。
-実験全体を通して必要な入出力の技術を問う。
+This is preliminary problem.
+It requires programming skills od input/putput, which are neccesary throufh the experoimental class.
 
-### 必要な知識
+### Required knowledge
+* how to provide values as inputs in programs.
+* how to print messages as outputs in programs.
 * scanf()
 * printf()
+* basic opperations ( +, -, *, /, %,  and others)
 
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。
+Write a program taking 2 integers, and print the sum of the integers.
+Add the new line code at the end of output.
+Here, you should take any input value from the standard input, stdin, while put any output value to the standars output, stdout.
 
-2つの整数値 aとbが入力される。  
-a+bを出力するプログラムを作成せよ。  
-なお、出力の最後には必ず改行コードをつけること。  
 
-参考
+Hint
 -----------
-標準入力から一つの整数を受け取るにはscanf関数を用いる。
+You can use scanf() function to get a value from the standard input.
 
     int a;
     scanf("%d", &a);
 
-改行コードを出力するには\nを用いる。
+You can use '\n' to move the cursor on your screen to the next line.
 
     printf("\n");
 
-ソースコードを提出する時、以下のように余計な出力をするとWrong Answerとなってしまうので注意。
+Never print any redundant code, your program is judged as a wrong one.
+For example, the first line is evaliated true, but the second false.
 
     /* This code will be Error */
     printf("A + B is %d\n", answer);
@@ -36,34 +39,33 @@ a+bを出力するプログラムを作成せよ。
     printf("%d\n", answer);
 
 
-入力
+Input
 -----------
-2つの整数値（0 <= A <= 10000, 0 <= B <= 10000）  
-A B
+The input consists of two integers, A and B, where 0 <= A <= 10000 and 0 <= B <= 10000.
 
 
 
-出力
+Output
 -----------
-A+B
+the sum of A and B, namely A+B.
 
 
-入力例1
+sample input 1
 -----------
     10 5
 
 
-出力例1
+sample output 1
 -----------
     15
 
 
-入力例2
+sample input 2
 -----------
     -5 3
 
 
-出力例2
+sample input 2
 -----------
     -2
 

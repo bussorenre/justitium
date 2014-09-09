@@ -1,72 +1,69 @@
 
-概要
+Summary
 ------
-この問題では、文字列の処理ができるかどうかを測る。
+This exercise checks the programing skill to utilize strings.
 
-### 必要な知識
-* 文字列
-* ライブラリ関数
+### Required knowledge
+* String
+* Standard input/output
 
 
-問題
+Problem
 ------
-※ ここでは、入力は「標準入力 stdin」から受け取り、出力は「標準出力 stdout」へ出力するものとする。  
-標準入力に文字列が入力される。  
+Write a program which count how times "the" appears in a sentence. "The" and "THE" is not included.  
 
-入力された文字列の中に何回、the が出現したかを数え、出力するプログラムを作成せよ  
-※ The やTHE はカウントしない。  
+You can get a sentence from standard input.
 
-
-入力
+Input
 -----------
-100行以下の文書
+A document which include sentences at most 100 lines.
 
 
-出力
+Output
 -----------
-the が出現した回数  
-※ 必ず最後に改行コードを入れること。
+how many times "the" appears.   
+Do not forget to print a new line code at the end.  
 
 
-入力例1
+Sample input 1
 -----------
     This is a pen.
 
 
-出力例1
+Sample output 1
 -----------
     0
 
 
-入力例2
+Sample input 2
 -----------
     I saw the movie in that theater.
 
 
-出力例2
+Sample output 2
 -----------
     2
 
 
 
-入力例3
+sample input 3
 -----------
     thethethethe
 
 
-出力例3
+sample output 3
 -----------
     4
 
 
 
-入力例4
+sample input 4
 -----------
     The balding middle-aged man asked his barber, “Why charge me the full price for cutting my hair — there’s so little of it.”
     “Well, “said the barber, “actually I make little charge for cutting it. What you’re paying for is my searching for it!”
 
 
-出力例4
+sample output 4
 -----------
     3
 
