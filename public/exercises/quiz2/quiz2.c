@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 {
     int N = 0, i = 1;
     scanf("%d", &N);
-    for (int i = 1; i <= N; i++)
+    for (i = 1; i <= N; i++)
     {
         if (i%15 == 0)
         {

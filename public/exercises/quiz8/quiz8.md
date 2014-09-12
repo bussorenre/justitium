@@ -5,7 +5,7 @@ This exercise checks the programing skill to utilize recursive function calls.
 
 ### Required knowledge
 * function
-* recurcive call
+* recursive call
 
 
 Problem
@@ -22,20 +22,19 @@ nCr can be represented in recursion
     nCn=1
     nCr=(n-1Cr-1)+(n-1Cr)
 
-please use following prototype declaration to caliculate combination.  
+Please use following prototype declaration to caliculate the combination.  
 
     int combination(int n, int r);
 
 
 Input
 -----------
-n r  
-（1 <= n, r <= 30）
+You should specify n and r（1 <= n, r <= 30）.  
 
 
 Output
 -----------
-nCr  
+The program should print the value of nCr.  
 Do not forget to print a new line code at the end.  
 
 
