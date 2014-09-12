@@ -19,7 +19,7 @@ namespace :db do
       'quiz6' => 'Palindrome',
       'quiz7' => 'Sorting',
       'quiz8' => 'Combination nCr',
-      'quiz9' => 'find a phrase "the"'
+      'quiz9' => 'Find "the" from strings'
     }
 
     # Create Exercise models

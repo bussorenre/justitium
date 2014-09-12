@@ -9,18 +9,15 @@ This exercise checks the programing skill to utilize strings.
 
 Problem
 ------
-Make a program which prints YES, if a sentence is palindrome. Otherwise, it should print NO.  
-
-You can get a sentence from standard input.
-
-It does not matter if you ignore any non-alphabetic character.   
-It's not case-sensitive.
-
+"Never odd or even" is a sentence which is the same string even if we read in the reverse way. Those sentences are called palindromes.  
+Make a program which prints YES, if a sentence is a palindrome. Otherwise, it should print NO.  
+You can get a sentence from the standard input.  
+It does not matter if you ignore any non-alphabetic character.  
+It is not case-sensitive.  
 
 Input
 -----------
-A sentence.
-
+A sentence to judge whether it is a palindrome.  
 
 Output
 -----------

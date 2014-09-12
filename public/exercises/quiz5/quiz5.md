@@ -9,26 +9,21 @@ This exercise checks the programming skill to utilize array.
 Problem
 ------
 
-Write a program which calculate and print a dot product of two vectors A and B.  
-You can get an integer, N, from the standard input at first.  
-after N, you can get components of vector A and components of vector B.  
-
-
+Write a program which calculates and prints a dot product of two vectors, A and B.  
+You can get an integer, N, from the standard input at first, to know the dimension of the vectors.
+Second, you can get components of vector A and components of vector B.  
 
 
 Input
 -----------
-integer N (1 <= N <= 1000) at 1st line.
-components of vector A (N-dimencional vector) at 2nd line.
-components of vector B (N-dimencional vector) at 3rd line.
+You should specify N (1 <= N <= 1000), components of vector A (N-dimensional vector), and components of vector B (N-dimensional vector) in this order.
 
 
 
 Output
 -----------
-dot product of A and B  
-（小数点以下6桁まで表示）  
-小数点以下の数を指定するには以下のようなコードを記述する。
+The program must print the dot product of A and B. 
+Print to the sixth decimal place, using the following code.  
 
     printf("%0.6f\n", answer);
 

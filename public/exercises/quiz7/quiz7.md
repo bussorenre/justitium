@@ -5,25 +5,24 @@ This exercise checks the programming skill to utilize array.
 
 ### Required knowledge
 * Array
-* sorting algorithm
+* Sorting algorithm
 
 
 Problem
 ------
-Write a program which sort some integers.  
-you can get an integer N and N integers from the standard input.  
-Sorts in ascending order numbers N number, print all.  
+Write a program which sorts a set of integers.  
+You can get an integer N, and N integers from the standard input.  
+Sort the number in ascending order, print all.  
 
 
 
 Input 
 -----------
-N (1 <= N <= 1000)  
-N numbers
+Input N (1 <= N <= 1000) and N numbers, in this order.
 
 Output
 -----------
-N numbers order by ascending.  
+The program should print N numbers in the ascending order.
 
 
 Sample input

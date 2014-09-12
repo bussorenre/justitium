@@ -10,18 +10,16 @@ This exercise checks the programing skill to utilize strings.
 
 Problem
 ------
-Write a program which count how times "the" appears in a sentence. "The" and "THE" is not included.  
-
-You can get a sentence from standard input.
+Write a program which counts how many times word "the" appears in a sentence. "The" and "THE" is not included. You can get a sentence from the standard input.  
 
 Input
 -----------
-A document which include sentences at most 100 lines.
+A document which includes sentences at most 100 lines.
 
 
 Output
 -----------
-how many times "the" appears.   
+The program prints how many times "the" appears.  
 Do not forget to print a new line code at the end.  
 
 
